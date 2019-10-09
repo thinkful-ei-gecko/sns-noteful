@@ -19,9 +19,9 @@ class Note extends React.Component {
           'content-type': 'application/json'
       },
     })
-    .then(res => res.json())
     .then(data => {
-      if (this.props.path === '/api/notes/:noteId') {
+      console.log(this.props.path)
+      if (this.props.path === '/api/notes/:note_id') {
         this.props.history.push('/')
       };
 
