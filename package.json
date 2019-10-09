@@ -1,0 +1,50 @@
+{
+  "name": "noteful-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.9",
+    "@fortawesome/free-solid-svg-icons": "^5.6.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "cors": "^2.8.5",
+    "date-fns": "^1.30.1",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "knex": "^0.19.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.3",
+    "pg": "^7.12.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "typeface-roboto": "0.0.54",
+    "xss": "^1.0.6"
+  },
+  "scripts": {
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "express": "nodemon src/server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "postgrator-cli": "^3.3.0",
+    "serve": "^11.1.0"
+  }
+}
