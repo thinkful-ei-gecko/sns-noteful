@@ -21,7 +21,7 @@ export default class AddFolder extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        let name = {folder_name: this.state.name};
+        let name = {folder_name: this.state.folder_name};
 
         fetch('http://localhost:8000/api/folders', {
             method: 'POST',

@@ -21,7 +21,6 @@ class Note extends React.Component {
     })
     .then(res => res.json())
     .then(data => {
-
       if (this.props.path === '/api/notes/:noteId') {
         this.props.history.push('/')
       };
