@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { API_ENDPOINT } from '../config'
 
 export default class AddNote extends Component {
 
@@ -37,7 +38,7 @@ export default class AddNote extends Component {
             folder_id: this.state.folder_id,
         }
 
-        fetch('http://localhost:8000/api/notes', {
+        fetch(`${API_ENDPOINT}/notes`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

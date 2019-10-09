@@ -10,6 +10,7 @@ import AddNote from '../forms/AddNote';
 import AddFolder from '../forms/AddFolder';
 import './App.css';
 import ErrorBoundary from '../errorBoundary'
+import { API_ENDPOINT} from '../config'
 
 class App extends Component {
     state = {
@@ -26,7 +27,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/api/folders', {
+        fetch(`${API_ENDPOINT}/folders`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +36,7 @@ class App extends Component {
             .then(res => res.json())
             .then(data => this.setFolders(data))
 
-        fetch('http://localhost:8000/api/notes', {
+        fetch(`${API_ENDPOINT}/notes`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -51,7 +52,7 @@ class App extends Component {
     }
 
     addFolder = () => {
-        fetch('http://localhost:8000/api/folders', {
+        fetch(`${API_ENDPOINT}/folders`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -62,7 +63,7 @@ class App extends Component {
     }
 
     addNote = () => {
-        fetch('http://localhost:8000/api/notes', {
+        fetch(`${API_ENDPOINT}/notes`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

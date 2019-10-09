@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { API_ENDPOINT } from '../config'
 
 export default class AddFolder extends Component {
     
@@ -23,7 +24,7 @@ export default class AddFolder extends Component {
         event.preventDefault();
         let name = {folder_name: this.state.folder_name};
 
-        fetch('http://localhost:8000/api/folders', {
+        fetch(`${API_ENDPOINT}/folders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

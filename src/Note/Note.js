@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import NotesContext from '../NotesContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { API_ENDPOINT } from '../config'
 import './Note.css'
 
 class Note extends React.Component {
@@ -13,7 +14,7 @@ class Note extends React.Component {
   static contextType = NotesContext;
 
   handleDelete(noteId, callback) {
-    fetch(`http://localhost:8000/api/notes/${noteId}`, {
+    fetch(`${API_ENDPOINT}notes/${noteId}`, {
       method: 'DELETE',
       headers: {
           'content-type': 'application/json'

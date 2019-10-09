@@ -23,8 +23,6 @@
     "xss": "^1.0.6"
   },
   "scripts": {
-    "migrate": "postgrator --config postgrator-config.js",
-    "migrate:test": "env NODE_ENV=test npm run migrate",
     "express": "nodemon src/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
